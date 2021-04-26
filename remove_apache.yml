@@ -1,0 +1,7 @@
+- hosts: labservers
+  become: yes
+  tasks:
+  - name: Remove httpd package
+    yum:
+      name: httpd
+      state: absent
